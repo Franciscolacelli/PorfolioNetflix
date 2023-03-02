@@ -1,0 +1,803 @@
+:root {
+  --rojo: #E50914;
+  --fonfo: #141414;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: var(--fonfo);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+  width: 90%;
+  margin: auto;
+}
+
+header{
+  padding: 20px 0;
+  width: 100%;
+
+}
+
+header .contenedor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logotipo{
+  font-family: 'Bebas Neue', cursiva;
+  font-weight: normal;
+  color:var(--rojo);
+  font-size: 50px;
+}
+header .logotipo:hover{
+  transition: .5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+header nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+  color: #fff;
+}
+
+/* ---------- Pelicula Principal -------------- */
+
+.pelicula-principal{
+  font-size: 16px;
+  min-height: 38em;
+  color: #fff;
+  background-image: url(/assets/images/soldier.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 2em;
+  display: flex;
+  align-items: end;
+
+}
+
+
+.pelicula-principal .contenedor {
+  margin: 0 auto;
+  margin-bottom: 2.25em;
+  
+}
+
+.pelicula-principal .titulo {
+  font-weight: 600;
+  font-size: 3.12em;
+  margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 50%;
+  margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+  background-color: rgba(0,0,0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
+  margin-bottom: .5em;
+}
+
+.pelicula-principal .boton:hover {
+    background-color: #fff;
+    color: #000;
+}
+.pelicula-principal .boton i {
+  margin-right: 1.25em;
+}
+/* ---------- contenedor titulo y controles 1 -------------- */
+.contenedor-titulos-controles{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contenedor-titulos-controles h3 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.contenedor-titulos-controles .indicadores button {
+  background-color: #fff;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.contenedor-titulos-controles .indicadores button:hover,
+.contenedor-titulos-controles .indicadores button.activo {
+  background-color: #E50914;
+}
+
+
+/* ---------- CAROUSEL 1-------------- */
+
+.peliculas-recomendadas{
+  margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 0, .2);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  transition: .3s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda{
+  left: 0;
+}
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+  right: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.peliculas-recomendadas .contenedor-carousel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+  min-width: 20%;
+  transition: .3s ease all;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img{
+  width: 100%;
+  vertical-align: top;
+  height: 200px;
+  padding: 10px;
+  background-image: url(/assets/images/git.jpg);
+  border: 1px solid black;
+}
+
+.pelicula:hover{
+  transition: 2s;
+  transform: scale(1.1);
+}
+
+/* ---------- CAROUSEL 2-------------- */
+
+.peliculas-recomendadas2{
+  margin-bottom: 70px;
+}
+
+.peliculas-recomendadas2 .contenedor-principal2{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.peliculas-recomendadas2 .contenedor-principal2 .flecha-izquierda2,
+.peliculas-recomendadas2 .contenedor-principal2 .flecha-derecha2 {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 0, .2);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  transition: .3s ease all;
+}
+
+.peliculas-recomendadas2 .contenedor-principal2 .flecha-izquierda2{
+  left: 0;
+}
+.peliculas-recomendadas2 .contenedor-principal2 .flecha-derecha2 {
+  right: 0;
+}
+
+.peliculas-recomendadas2 .contenedor-principal2 .flecha-izquierda2:hover,
+.peliculas-recomendadas2 .contenedor-principal2 .flecha-derecha2:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.peliculas-recomendadas2 .contenedor-carousel2 {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas2 .contenedor-carousel2 .carousel2 {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas2 .contenedor-carousel2 .carousel2 .pelicula2 {
+  min-width: 20%;
+  transition: .3s ease all;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  background-image: url(/assets/images/git.jpg);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+
+.pelicula2:hover{
+  transition: 2s;
+  transform: scale(1.1);
+}
+
+
+/* -------- Caruosel 2 cartas-------  */
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  vertical-align: top;
+  height: 200px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgb(0, 0, 0);
+  
+}
+
+.servicio {
+  background-image: url(/assets/images/servicio.jpg);
+  background-size: cover;
+  color: rgb(0, 0, 0);
+}
+
+.respo {
+  background-image: url(/assets/images/respon.jpg);
+  background-size: cover;
+}
+
+.disciplina {
+  background-image: url(/assets/images/disciplina.jpg);
+  background-size: cover;
+  color: #ffffff;
+}
+
+.integridad {
+  background-image: url(/assets/images/integridad.jpg);
+  background-size: cover;
+  color: #000000;
+}
+
+.lealtad {
+  background-image: url(/assets/images/lealtad.jpg);
+  background-size: cover;
+  color: #ffffff;
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, rgb(0, 0, 0), rgb(71, 71, 71));
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+/* ---------- CAROUSEL 3-------------- */
+
+.peliculas-recomendadas3{
+  margin-bottom: 70px;
+}
+
+.peliculas-recomendadas3 .contenedor-principal3{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.peliculas-recomendadas3 .contenedor-principal3 .flecha-izquierda3,
+.peliculas-recomendadas3 .contenedor-principal3 .flecha-derecha3 {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 0, .2);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  transition: .3s ease all;
+}
+
+.peliculas-recomendadas3 .contenedor-principal3 .flecha-izquierda3{
+  left: 0;
+}
+.peliculas-recomendadas3 .contenedor-principal3 .flecha-derecha3 {
+  right: 0;
+}
+
+.peliculas-recomendadas3 .contenedor-principal3 .flecha-izquierda3:hover,
+.peliculas-recomendadas3 .contenedor-principal3 .flecha-derecha3:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.peliculas-recomendadas3 .contenedor-carousel3 {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas3 .contenedor-carousel3 .carousel3 {
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+.peliculas-recomendadas3 .contenedor-carousel3 .carousel3 .pelicula3 {
+  min-width: 20%;
+  transition: .3s ease all;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0);
+  background-image: url(/assets/images/git.jpg);
+  border: 1px solid rgb(0, 0, 0);
+  
+}
+
+.peliculas-recomendadas3 .contenedor-carousel3 .carousel3 .pelicula3 img{
+  width: 100%;
+  vertical-align: top;
+  height: 200px;
+  padding: 10px;
+ 
+}
+
+.pelicula3:hover {
+  transition: 2s;
+  transform: scale(1.1);
+ 
+}
+
+
+
+/* -------------- contacto -------- */
+.contact {
+ display: flex;
+ flex-direction: column;
+
+
+}
+
+
+.contact__container {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin-top: 50px;
+
+ 
+}
+
+.contact__info{
+  color: rgb(161, 161, 161);
+  gap: 2rem;
+  padding: 5px;
+  font-size: 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+ 
+}
+
+.contact__info-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin-top: 50px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 4px;
+  font-style: normal;
+  text-decoration: none;
+
+}
+
+.linkk:visited{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.linkk:link{
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 20px rgb(172, 172, 172);
+  text-decoration: none;
+}
+
+.contact__info-map{
+  text-shadow: 2px 2px 20px rgb(172, 172, 172);
+}
+
+.contact__info-map:hover{
+  color: rgb(71, 71, 71);
+  text-shadow: 2px 2px 20px gray;
+  cursor: pointer;
+}
+
+.linkk:hover{
+  color: rgb(71, 71, 71);
+  text-shadow: 2px 2px 20px gray;
+}
+
+.contact__form{
+  width: 35%;
+  color:rgb(255, 255, 255);
+  border-radius: 30px;
+  background-image: url(/assets/images/soldier.jpg);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.contact__form-title{
+  margin: 20px;
+  font-family: 'Bebas Neue';
+  letter-spacing: 3px;
+}
+
+.contact__form-group{
+  font-family: 'Bebas Neue';
+  width: 100%;
+  letter-spacing: 3px;
+  
+}
+
+.contact__form-label{
+  display: block;
+  width: 90%;
+  margin: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-family: 'Bebas Neue';
+  letter-spacing: 3px;
+}
+
+.contact__form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: rgba(187, 186, 186, 0.651);
+  border: 2px solid rgb(0, 0, 0);
+
+}
+
+.contact__form-button{
+  background-color: rgb(0, 0, 0);
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-family: 'Bebas Neue';
+  letter-spacing: 3px;
+  color: rgb(255, 255, 255);
+  margin: 20px;
+  font-size: 14px;
+
+}
+
+.contact__form-button:hover {
+  transition: .5s;
+  background-color: rgb(139, 139, 139);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+
+}
+
+/* ============= Footer ============= */
+.footer {
+  background-color: rgb(78, 78, 78);
+  color: rgb(0, 0, 0);
+  margin-top: 100px;
+
+
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+   margin-left: 50px;
+  margin-right: 200px;
+  gap: 150px;
+
+}
+
+.footer__title {
+  margin: 20px;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  font-family: 'Bebas Neue';
+  letter-spacing: 3px;
+
+
+}
+
+.footer__info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.photo{
+
+  height: 100px;
+  width: 100px;
+  margin-top: 25px;
+  background-image: url(/assets/images/0000.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 3px 3px 20px rgb(0, 0, 0);
+}
+
+.footer__description{
+  width: 500px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+ 
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.5rem;
+ 
+}
+
+.footer__social-item{
+  list-style-type: none;
+}
+
+.footer__social-link {
+  color: rgb(255, 255, 255);
+  transition: .3s;
+}
+
+.footer__social-link:hover{
+ color: rgb(10, 10, 10);
+ text-shadow: 2px 2px 20px rgb(0, 0, 0);
+}
+
+.footer__copy {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  border-top: 1px solid #222;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+ 
+}
+
+
+/* --------------Media Queries-------- */
+
+@media screen and (max-width: 800px){
+  header .logotipo {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  header .contenedor{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pelicula-principal {
+    font-size: 14px;
+  }
+
+  .pelicula-principal .descripcion{
+    max-width: 100%;
+  }
+
+  .peliculas-recomendadas .contenedor-carousel {
+    overflow: visible;
+    
+  }
+
+  .peliculas-recomendadas .contenedor-carousel .carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+  }
+
+  .pelicula{
+
+    width: 200px;
+    height: 200px;
+  
+  }
+
+  .peliculas-recomendadas .indicadores,
+  .peliculas-recomendadas .flecha-izquierda,
+  .peliculas-recomendadas .flecha-derecha {
+    display: none;
+  }
+
+  /* ------------2------- */
+
+   .peliculas-recomendadas2 .contenedor-carousel2 {
+    overflow: visible;
+    
+  }
+
+  .peliculas-recomendadas2 .contenedor-carousel2 .carousel2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+  }
+
+  .pelicula2{
+
+    width: 200px;
+    height: 200px;
+  
+  }
+
+  .peliculas-recomendadas2 .indicadores2,
+  .peliculas-recomendadas2 .flecha-izquierda2,
+  .peliculas-recomendadas2 .flecha-derecha2 {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.4em;
+  }
+
+    /* ------------3------- */
+
+    .peliculas-recomendadas3 .contenedor-carousel3 {
+      overflow: visible;
+      
+    }
+  
+    .peliculas-recomendadas3 .contenedor-carousel3 .carousel3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      
+    }
+  
+    .pelicula3{
+  
+      width: 200px;
+      height: 200px;
+    
+    }
+  
+    .peliculas-recomendadas3 .indicadores3,
+    .peliculas-recomendadas3 .flecha-izquierda3,
+    .peliculas-recomendadas3 .flecha-derecha3 {
+      display: none;
+    }
+
+    .footer__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-left: 0px;
+      margin-right: 0px;
+      gap: 0px;
+    }
+
+    .contact__form{
+      width: 65%;
+    }
+}
